@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    padding: 15px 60px;
+    height: 120vh;
+    overflow: auto;
+    transition: .3s;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+button{
+    padding: 10px 35px;
+    border-radius: 4px;
+    font-size: 15px;
+    position: relative;
+    border: none;
+    background-color: hsl(0, 0%, 98%);
+    margin:50px 0px;
+    box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.29);
+
+}
+
+button#dark::before{
+    background-color: white;
+}
+
+button:focus{
+    outline: none;
+}
+
+
+button:hover::before{
+    left: 20%;
+}
+
+button:hover::after{
+    left: 10%;
+}
+
+button::before{
+    content: "";
+    position: absolute;
+    transition: .3s;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 1px;
+    background-color: black;
+}
+
+button#dark::after{
+    border-color: transparent white transparent transparent;
+}
+
+button::after{
+    content: "";
+    position: absolute;
+    transition: .3s;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+   
+}
+
+.flex-countrie{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    /* margin: 0; */
+}
+
+.main-details{
+    flex: 1;
+    display: flex;
+    /* width: 500px; */
+    justify-content: space-between;
+}
+
+.details2{
+    margin-left: 100px;
+}
+
+
+.details1 p:not(last-child){
+    margin-top: 20px;
+}
+
+.details2 p:not(last-child){
+    margin-top: 20px;
+}
+
+
+.main-details span{
+    opacity: 0.7;
+    font-weight: bolder;
+    border-bottom: 1px dashed black;
+}
+
+.flex-header-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    margin-left: 60px;
+}
+
+a{
+    text-transform: uppercase;
+    
+}
+
+a#dark{
+    background-color: hsl(207, 26%, 17%);
+
+}
+
+img{
+    height: 314px;
+    width: 450px;
+}
+
+.head-countrie h1{
+    margin-bottom: 15px;
+}
+
+span#dark .borders{
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+}
+
+.border-countreis{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+}
+
+.borders{
+    
+    margin: 0px 20px;
+    border: 1px solid black;
+    padding: 3px 20px;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.border-countreis{
+    margin-top: 20px;
+}
+
+@media (max-width:1100px) {
+
+
+    .flex-countrie{
+        column-gap: 10px;
+        align-items: center;
+        /* margin: 0; */
+    }
+
+    img{
+        height: 270px;
+        width: 406px;
+    }
+}
+
+@media (max-width:1000px){
+
+    main{
+        font-size: 18px;
+        height: 120vh;
+    }
+
+    .flex-countrie{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .flex-header-main {
+        margin-top: 30px;
+        
+        flex-direction: column;
+        /* align-items: center; */
+    }
+}
+
+@media (max-width:570px){
+
+    
+    main{
+       width: 100%;
+       height: 140vh;
+    }
+
+    .flex-header-main{
+        align-items: flex-start;
+        margin-left: -50px;
+    }
+    
+    .main-details{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .details2{
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+    
+}
+
+@media (max-width:500px){
+    button{
+        margin:50px -30px;
+        padding: 13px 45px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:430px){
+    img{
+        height: 200px;
+        width: 346px;
+    }
+}
+
+@media (max-width:400px){
+    main{
+        font-size: 16px;
+    }
+
+
+    .borders{
+        font-size: 13px;
+    }
+}
+
+@media (max-width:360px){
+    img{
+        height: 150px;
+        width: 300px;
+    }
+
+    .borders{
+        padding: 2px 15px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width:325px){
+    img{
+        width: 140%;
+    }
+
+    button{
+        padding: 10px 30px;
+        font-size: 13px;
+    }
+}
+
+main#dark{
+    background-color: hsl(207, 26%, 17%);
+    color: white ;
+}

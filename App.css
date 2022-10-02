@@ -1,0 +1,31 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.Contries-container {
+  background-color: hsl(0, 0%, 98%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 50px;
+  height: auto;
+  transition: .2s;
+  padding: 50px 60px;
+}
+
+.Contries-container#dark{
+  background-color: hsl(207, 26%, 17%);
+}
+
+
+@media (max-width:550px) {
+
+  .Contries-container{
+    flex-direction: column;
+  }
+  
+}
